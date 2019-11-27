@@ -7,7 +7,8 @@
     "test": "istanbul cover _mocha && eslint .",
     "example": "node ./example/html-to-text.js",
     "lint": "eslint .",
-    "prepublish": "npm test"
+    "prepublish": "npm test",
+    "build:bq": "browserify -o dist/html-to-text.js --standalone htmlToText lib/html-to-text.js"
   },
   "author": {
     "name": "Malte Legenhausen",
@@ -43,9 +44,11 @@
     "html-to-text": "./bin/cli.js"
   },
   "devDependencies": {
+    "browserify": "^16.5.0",
     "chai": "^4.2.0",
     "eslint": "^5.15.3",
     "istanbul": "^0.4.5",
-    "mocha": "^6.0.2"
+    "mocha": "^6.0.2",
+    "tinyify": "^2.5.1"
   }
 }
